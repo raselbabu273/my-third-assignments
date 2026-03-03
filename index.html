@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="winter">
 
 <head>
     <meta charset="UTF-8">
@@ -58,48 +58,48 @@
     <nav class="w-13/16 mx-auto px-6 py-6 sticky top-0 bg-base-200 z-10">
         <div class="flex justify-between items-center mb-7">
             <h2 class="text-2xl font-bold">Available Jobs</h2>
-            <p class="text-gray-500 text-lg font-medium"><span id="available">8 jobs</span></p>
+            <p class="text-gray-500 text-lg font-medium"><span id="available"></span> Jobs</p>
         </div>
 
         <div class="gap-5">
             <button id="tab-all" onclick="switchTab('all')"
-                class="px-8 py-1.5 rounded-lg border-1 shadow-sm transition-all duration-200">All</button>
+                class="px-8 py-1.5 rounded-lg border-1 shadow-sm hover: cursor-pointer">All</button>
             <button id="tab-interview" onclick="switchTab('interview')"
-                class="px-7 py-1.5 rounded-lg border-1 shadow-sm transition-all duration-200">Interview</button>
+                class="px-7 py-1.5 rounded-lg border-1 shadow-sm hover: cursor-pointer">Interview</button>
             <button id="tab-rejected" onclick="switchTab('rejected')"
-                class="px-7 py-1.5 rounded-lg border-1 shadow-sm transition-all duration-200">Rejected</button>
+                class="px-7 py-1.5 rounded-lg border-1 shadow-sm hover: cursor-pointer">Rejected</button>
         </div>
     </nav>
 
     <!-- Job Cards -->
     <section id="jobs-container" class="w-13/16 mx-auto px-6 py-6 bg-base-200 flex flex-col gap-4">
 
-        <section id="all-container" class="hidden">
+        <section id="all-container" class="hidden space-y-8">
             <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
                 <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
                     <i class="fa-solid fa-trash-can delete"></i>
                 </button>
 
-                <h2 class="text-2xl font-semibold text-gray-900">Mobile First Corp</h2>
+                <h2 class="text-2xl font-semibold text-gray-900">Google</h2>
 
-                <p class="text-lg text-gray-600 mt-1">React Native Developer</p>
+                <p class="text-lg text-gray-600 mt-1">Software Engineer</p>
 
                 <div class="flex items-center gap-4 text-gray-500 text-sm">
-                    <span>Remote</span>
+                    <span>Mountain View, California, USA</span>
                     <span>•</span>
                     <span>Full-time</span>
                     <span>•</span>
-                    <span>$130,000 - $175,000</span>
+                    <span>$130,000 - $180,000 per year</span>
                 </div>
 
                 <div
-                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-200">
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
                     <span>NOT APPLIED</span>
                 </div>
 
 
-                <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on
-                    products used by millions of users worldwide.</p>
+                <p class="text-gray-500">Develops scalable software solutions, search engine technologies, cloud
+                    computing services, and AI-driven products used globally.</p>
 
                 <div class="flex gap-4">
                     <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
@@ -111,26 +111,274 @@
                     <i class="fa-solid fa-trash-can delete"></i>
                 </button>
 
-                <h2 class="text-2xl font-semibold text-gray-900">Mobile First Corp</h2>
+                <h2 class="text-2xl font-semibold text-gray-900">Tesla, Inc.</h2>
 
-                <p class="text-lg text-gray-600 mt-1">React Native Developer</p>
+                <p class="text-lg text-gray-600 mt-1">Mechanical Design Engineer</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Austin, Texas, USA</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>$95,000 - $140,000 per year</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Designs and manufactures electric vehicles, battery storage systems, and
+                    renewable energy products.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Amazon</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Warehouse Associate</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Seattle, Washington, USA</span>
+                    <span>•</span>
+                    <span>Part-time</span>
+                    <span>•</span>
+                    <span>$18 - $25 per hour</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Handles inventory management, packing, and shipping operations within
+                    distribution centers.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Netflix</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Customer Support Representative</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote</span>
+                    <span>•</span>
+                    <span>Part-time</span>
+                    <span>•</span>
+                    <span>$22 - $30 per hour</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Assists subscribers with account issues, billing inquiries, and streaming
+                    support.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Microsoft</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Cloud Solutions Architect</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Redmond, Washington, USA</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>$120,000 - $165,000 per year</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Provides enterprise software, operating systems, productivity tools, and cloud
+                    computing platforms.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Zivtech</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Front-End Developer</p>
 
                 <div class="flex items-center gap-4 text-gray-500 text-sm">
                     <span>Remote</span>
                     <span>•</span>
                     <span>Full-time</span>
                     <span>•</span>
-                    <span>$130,000 - $175,000</span>
+                    <span>$65,000 - $95,000 per year</span>
                 </div>
 
                 <div
-                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-200">
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
                     <span>NOT APPLIED</span>
                 </div>
 
 
-                <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on
-                    products used by millions of users worldwide.</p>
+                <p class="text-gray-500">Designs and builds websites and web applications with open source tools like
+                    Drupal for clients worldwide.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Gluonweb</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Web Developer</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>₹15,000 - ₹30,000 per month</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Offers web development, SEO services, app development, graphic design & web
+                    hosting services to small and medium businesses.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Netguru</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Full Stack Web Developer</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Poznań, Poland</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>€40,000 - €70,000 per year</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Provides web app development, IT consulting, product design and software
+                    solutions globally.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">LuminoGuru</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Web Project Coordinator</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote / Global</span>
+                    <span>•</span>
+                    <span>Part-time</span>
+                    <span>•</span>
+                    <span>$20 - $35 per hour</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Custom web solutions, UI/UX design, and SaaS development for startups and small
+                    businesses worldwide.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
+            </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
+
+                <h2 class="text-2xl font-semibold text-gray-900">Toptal</h2>
+
+                <p class="text-lg text-gray-600 mt-1">Freelance Web Developer</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote (Worldwide)</span>
+                    <span>•</span>
+                    <span>Part-time / Contract</span>
+                    <span>•</span>
+                    <span>$80 – $150 per hour</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-300">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Matches elite freelance talent to web and application development gigs for
+                    global clients.</p>
 
                 <div class="flex gap-4">
                     <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
