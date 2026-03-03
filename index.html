@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job | Application | Tracker</title>
+
+    <!-- Tailwind + DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Fonts -->
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-base-200 min-h-screen mx-auto">
+    <section class="w-13/16 mx-auto px-6 py-12 bg-base-200">
+        <h1 class="text-4xl font-bold text-base-content mb-10">Job Application Tracker</h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- Total Card -->
+            <div class="card bg-base-100 shadow-sm border border-base-300">
+                <div class="card-body">
+                    <p class="text-gray-700 text-lg">Total</p>
+                    <h2 class="text-4xl font-bold text-base-content">8</h2>
+                </div>
+            </div>
+
+            <!-- Interview Card -->
+            <div class="card bg-base-100 shadow-sm border border-base-300">
+                <div class="card-body">
+                    <p class="text-gray-700 text-lg">Interview</p>
+                    <h2 class="text-4xl font-bold text-success">0</h2>
+                </div>
+            </div>
+
+            <!-- Rejected Card -->
+            <div class="card bg-base-100 shadow-sm border border-base-300">
+                <div class="card-body">
+                    <p class="text-gray-700 text-lg">Rejected</p>
+                    <h2 class="text-4xl font-bold text-error">0</h2>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <nav class="w-13/16 mx-auto px-6 py-6 sticky top-0 bg-base-200 z-10">
+        <div class="flex justify-between items-center mb-7">
+            <h2 class="text-2xl font-bold">Available Jobs</h2>
+            <p class="text-gray-500 text-lg font-medium">8 jobs</p>
+        </div>
+
+        <div class="gap-5">
+            <button class="btn btn-outline px-6 shadow-sm border border-base-300 text-neutral-600">All</button>
+            <button
+                class="btn btn-outline btn-success shadow-sm border border-base-300 text-neutral-600">Interview</button>
+            <button
+                class="btn btn-outline btn-error shadow-sm border border-base-300 text-neutral-600">Rejected</button>
+        </div>
+    </nav>
+
+    <section class="w-13/16 mx-auto px-6 py-6 bg-base-200 grid gap-5">
+        <div class="rounded-xl border border-gray-200 shadow-sm p-8 relative">
+
+            <!-- Trash Icon -->
+            <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600">
+                <i class="fa-solid fa-trash-can hover:red"></i>
+            </button>
+
+            <!-- Company -->
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Mobile First Corp
+            </h2>
+
+            <!-- Job Title -->
+            <p class="text-lg text-gray-600 mt-1">
+                React Native Developer
+            </p>
+
+            <!-- Meta Info -->
+            <div class="flex items-center gap-4 text-gray-500 mt-3 text-sm">
+                <span>Remote</span>
+                <span>•</span>
+                <span>Full-time</span>
+                <span>•</span>
+                <span>$130,000 - $175,000</span>
+            </div>
+
+            <!-- Status Badge -->
+            <div class="mt-5">
+                <span class="px-4 py-1.5 text-xs font-semibold bg-gray-200 text-gray-700 rounded-full">NOT
+                    APPLIED</span>
+            </div>
+
+            <!-- Description -->
+            <p class="mt-6 text-gray-500">Build cross-platform mobile applications using React Native. Work on products
+                used by millions of users worldwide.</p>
+
+            <!-- Action Buttons -->
+            <div class="mt-8 flex gap-4">
+                <button class="btn btn-outline btn-success rounded-lg">Interview</button>
+                <button class="btn btn-outline btn-error rounded-lg">Rejected</button>
+            </div>
+
+        </div>
+        <div class="rounded-xl border border-gray-200 shadow-sm p-8 relative">
+
+            <!-- Trash Icon -->
+            <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600">
+                <i class="fa-solid fa-trash-can hover:red"></i>
+            </button>
+
+            <!-- Company -->
+            <h2 class="text-2xl font-semibold text-gray-900">
+                Mobile First Corp
+            </h2>
+
+            <!-- Job Title -->
+            <p class="text-lg text-gray-600 mt-1">
+                React Native Developer
+            </p>
+
+            <!-- Meta Info -->
+            <div class="flex items-center gap-4 text-gray-500 mt-3 text-sm">
+                <span>Remote</span>
+                <span>•</span>
+                <span>Full-time</span>
+                <span>•</span>
+                <span>$130,000 - $175,000</span>
+            </div>
+
+            <!-- Status Badge -->
+            <div class="mt-5">
+                <span class="px-4 py-1.5 text-xs font-semibold bg-gray-200 text-gray-700 rounded-full">NOT
+                    APPLIED</span>
+            </div>
+
+            <!-- Description -->
+            <p class="mt-6 text-gray-500">Build cross-platform mobile applications using React Native. Work on products
+                used by millions of users worldwide.</p>
+
+            <!-- Action Buttons -->
+            <div class="mt-8 flex gap-4">
+                <button class="btn btn-outline btn-success rounded-lg">Interview</button>
+                <button class="btn btn-outline btn-error rounded-lg">Rejected</button>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>
