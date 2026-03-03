@@ -33,7 +33,7 @@
             <div class="card bg-base-100 shadow-sm border border-base-300">
                 <div class="card-body">
                     <p class="text-gray-700 text-lg">Total</p>
-                    <h2 class="text-4xl font-bold text-base-content">8</h2>
+                    <h2 id="state-total" class="text-4xl font-bold text-base-content">0</h2>
                 </div>
             </div>
 
@@ -41,7 +41,7 @@
             <div class="card bg-base-100 shadow-sm border border-base-300">
                 <div class="card-body">
                     <p class="text-gray-700 text-lg">Interview</p>
-                    <h2 class="text-4xl font-bold text-success">0</h2>
+                    <h2 id="state-interview" class="text-4xl font-bold text-success">0</h2>
                 </div>
             </div>
 
@@ -49,17 +49,16 @@
             <div class="card bg-base-100 shadow-sm border border-base-300">
                 <div class="card-body">
                     <p class="text-gray-700 text-lg">Rejected</p>
-                    <h2 class="text-4xl font-bold text-error">0</h2>
+                    <h2 id="state-reject" class="text-4xl font-bold text-error">0</h2>
                 </div>
             </div>
-
         </div>
     </section>
 
     <nav class="w-13/16 mx-auto px-6 py-6 sticky top-0 bg-base-200 z-10">
         <div class="flex justify-between items-center mb-7">
             <h2 class="text-2xl font-bold">Available Jobs</h2>
-            <p class="text-gray-500 text-lg font-medium">8 jobs</p>
+            <p class="text-gray-500 text-lg font-medium"><span id="available">8 jobs</span></p>
         </div>
 
         <div class="gap-5">
@@ -72,105 +71,85 @@
         </div>
     </nav>
 
-    <section class="w-13/16 mx-auto px-6 py-6 bg-base-200 grid gap-5">
-        <div class="rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer">
+    <!-- Job Cards -->
+    <section id="jobs-container" class="w-13/16 mx-auto px-6 py-6 bg-base-200 flex flex-col gap-4">
 
-            <!-- Trash Icon -->
-            <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600">
-                <i class="fa-solid fa-trash-can hover:red"></i>
-            </button>
+        <section id="all-container" class="hidden">
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
 
-            <!-- Company -->
-            <h2 class="text-2xl font-semibold text-gray-900">
-                Mobile First Corp
-            </h2>
+                <h2 class="text-2xl font-semibold text-gray-900">Mobile First Corp</h2>
 
-            <!-- Job Title -->
-            <p class="text-lg text-gray-600 mt-1">
-                React Native Developer
-            </p>
+                <p class="text-lg text-gray-600 mt-1">React Native Developer</p>
 
-            <!-- Meta Info -->
-            <div class="flex items-center gap-4 text-gray-500 mt-3 text-sm">
-                <span>Remote</span>
-                <span>•</span>
-                <span>Full-time</span>
-                <span>•</span>
-                <span>$130,000 - $175,000</span>
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>$130,000 - $175,000</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-200">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on
+                    products used by millions of users worldwide.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
             </div>
+            <div class="card rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer space-y-4">
+                <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600 cursor-pointer">
+                    <i class="fa-solid fa-trash-can delete"></i>
+                </button>
 
-            <!-- Status Badge -->
-            <div class="mt-5">
-                <span class="px-4 py-1.5 text-xs font-semibold bg-gray-200 text-gray-700 rounded-full">NOT
-                    APPLIED</span>
+                <h2 class="text-2xl font-semibold text-gray-900">Mobile First Corp</h2>
+
+                <p class="text-lg text-gray-600 mt-1">React Native Developer</p>
+
+                <div class="flex items-center gap-4 text-gray-500 text-sm">
+                    <span>Remote</span>
+                    <span>•</span>
+                    <span>Full-time</span>
+                    <span>•</span>
+                    <span>$130,000 - $175,000</span>
+                </div>
+
+                <div
+                    class="inline-block text-center text-[0.65rem] change font-bold tracking-widest rounded-full uppercase px-3 py-1 w-28 text-slate-500 bg-slate-200">
+                    <span>NOT APPLIED</span>
+                </div>
+
+
+                <p class="text-gray-500">Build cross-platform mobile applications using React Native. Work on
+                    products used by millions of users worldwide.</p>
+
+                <div class="flex gap-4">
+                    <button class="btn btn-outline btn-success rounded-lg interview">Interview</button>
+                    <button class="btn btn-outline btn-error rounded-lg rejected">Rejected</button>
+                </div>
             </div>
+        </section>
 
-            <!-- Description -->
-            <p class="mt-6 text-gray-500">Build cross-platform mobile applications using React Native. Work on products
-                used by millions of users worldwide.</p>
+        <section id="interview-container" class="hidden"></section>
+        <section id="rejected-container" class="hidden"></section>
+    </section>
 
-            <!-- Action Buttons -->
-            <div class="mt-8 flex gap-4">
-                <button class="btn btn-outline btn-success rounded-lg">Interview</button>
-                <button class="btn btn-outline btn-error rounded-lg">Rejected</button>
-            </div>
-
-        </div>
-        <div class="rounded-xl border border-gray-200 shadow-sm p-8 relative cursor-pointer">
-
-            <!-- Trash Icon -->
-            <button class="absolute top-6 right-6 text-gray-500 hover:text-red-600">
-                <i class="fa-solid fa-trash-can hover:red"></i>
-            </button>
-
-            <!-- Company -->
-            <h2 class="text-2xl font-semibold text-gray-900">
-                Mobile First Corp
-            </h2>
-
-            <!-- Job Title -->
-            <p class="text-lg text-gray-600 mt-1">
-                React Native Developer
-            </p>
-
-            <!-- Meta Info -->
-            <div class="flex items-center gap-4 text-gray-500 mt-3 text-sm">
-                <span>Remote</span>
-                <span>•</span>
-                <span>Full-time</span>
-                <span>•</span>
-                <span>$130,000 - $175,000</span>
-            </div>
-
-            <!-- Status Badge -->
-            <div class="mt-5">
-                <span class="px-4 py-1.5 text-xs font-semibold bg-gray-200 text-gray-700 rounded-full">NOT
-                    APPLIED</span>
-            </div>
-
-            <!-- Description -->
-            <p class="mt-6 text-gray-500">Build cross-platform mobile applications using React Native. Work on products
-                used by millions of users worldwide.</p>
-
-            <!-- Action Buttons -->
-            <div class="mt-8 flex gap-4">
-                <button class="btn btn-outline btn-success rounded-lg">Interview</button>
-                <button class="btn btn-outline btn-error rounded-lg">Rejected</button>
-            </div>
-
-        </div>
-
-        <div>
-            <section class="hidden">Interview section</section>
-            <section class="hidden">Rejected section</section>
-        </div>
-
-        <!-- Empty state -->
-         <div id="empty-state" class="flex-col justify-center items-center py-20 gap-4 text-center space-y-2 hidden">
+    <!-- Empty state -->
+    <section class="w-13/16 mx-auto px-6 py-12 bg-base-200">
+        <div id="empty-state" class="flex-col justify-center items-center py-20 gap-4 text-center space-y-2 hidden">
             <div class="text-8xl text-blue-400"><i class="fa-regular fa-file-lines"></i></div>
             <p class="font-syne text-xl font-bold text-navy">No jobs available</p>
             <p class="text-sm text-slate-400">Check back soon for new opportunities</p>
-         </div>
+        </div>
     </section>
     <script src="script/index.js"></script>
 </body>
